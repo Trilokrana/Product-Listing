@@ -1,38 +1,214 @@
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  padding: 10px 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-header {
+  position: relative;
+}
+
+.view-product-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  opacity: 0; 
+}
+
+.card-header:hover .view-product-button {
+  opacity: 0.8; 
+}
+
+.view-product-button:hover {
+  background-color: #2980b9;
+}
+
+.price {
+  margin: 0;
+}
+
+.heart-active {
+  color: red;
+}
+
+.price-heart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.heart-icon {
+  background:#ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 30px;
+  padding: 6px;
+  padding-bottom: 1px;
+
+}
+
+
+.icons{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.heart-icon {
+  color: white; 
+  font-size: 18px; 
+  transition: color 0.3s ease; 
+  
+}
+
+.heart-icon:hover {
+  color: red; 
+}
+
+.heart-active {
+  color: red !important; 
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+
+.Search {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 55%;
+  border: 1px solid #ccc;
+  background-color: #ebe6e6;
+  border-radius: 10px;
+  transition: border 0.3s;
+  outline: none;
+  border: none;
 }
 
-@keyframes App-logo-spin {
+.Search:focus {
+  border: none; 
+}
+
+.Card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+ 
+}
+
+.card-inner {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow:  2px 0px 7px 1px rgb(95, 89, 89);
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  flex-direction: column;
+  display: flex;
+}
+
+.card-inner:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  height: 120px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.card__img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+  padding: 8px;
+}
+
+.card-body h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 0.8px;
+  color: #333;
+}
+
+.card-body p {
+  font-size: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+  color: #666;
+}
+
+.wishlist-button {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.wishlist-button:hover {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.wishlist-active {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+/* Animation */
+.animated {
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
+
